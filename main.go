@@ -35,11 +35,5 @@ func main() {
 	modulasi.User(name, isAktif)
 
 	//struct
-	student1 := modulasi.Mahasiswa{
-		Nama:         "kornelius",
-		ProgramStudi: "teknologi informasi",
-		Semester:     4,
-		Umur:         19,
-		Aktif:        true,
-	}
+	modulasi.TampilData()
 }
