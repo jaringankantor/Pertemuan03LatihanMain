@@ -35,5 +35,5 @@ func main() {
 	modulasi.User(name, isAktif)
 
 	//struct
-	modulasi.TampilData()
+	modulasi.TampilData
 }
