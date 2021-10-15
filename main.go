@@ -6,6 +6,25 @@ import (
 	modulasi "github.com/jaringankantor/Pertemuan03LatihanModule"
 )
 
+//interface struct
+
+type PersegiInterface interface {
+	Keliling() int
+	Luas() int
+}
+
+type InputPersegi struct {
+	a, b int
+}
+
+func (in InputPersegi) Keliling() int {
+	return (in.a + in.b) * 2
+}
+
+func (in InputPersegi) Luas() int {
+	return in.a * in.b
+}
+
 func main() {
 	a := 3
 	b := 5
@@ -35,5 +54,22 @@ func main() {
 	modulasi.User(name, isAktif)
 
 	//struct
-	modulasi.TampilData
+	modulasi.TampilData()
+
+	//struct module
+	welcome := modulasi.Pegawai{Nama: "Anwar"}
+	welcome.SelamatDatang("Budi")
+
+	//Anonymous struct
+	modulasi.AnonymousDataOrtu()
+
+	//interface struct
+
+	persegi := InputPersegi{
+		a: 23,
+		b: 45,
+	}
+
+	fmt.Println("Jika a=", persegi.a, ", b=", persegi.b, ". Maka keliling=", persegi.Keliling())
+	fmt.Println("Jika a=", persegi.a, ", b=", persegi.b, ". Maka luas=", persegi.Luas())
 }
